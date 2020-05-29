@@ -1,2 +1,4 @@
-# embedded_avr
-Personal home-project with AVR-processor
+# Embedded Programming Project: AVR-microcontroller
+Personal home-project with AVR-microcontroller
+
+
