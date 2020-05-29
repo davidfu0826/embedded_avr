@@ -3,7 +3,7 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-// >> avr-gcc -mmcu=atmega1284p  -g toggle-lamp.c  -o toggle-lamp.elf -O1
+// >> avr-gcc -mmcu=atmega328p  -g toggle-lamp.c  -o toggle-lamp.elf -O1
 // >> avr-objcopy -j .text -j .data -j .bss -O ihex toggle-lamp.elf toggle-lamp.hex
 // >> avrdude -p m328p -c arduino -P COM3 -e -U flash:w:toggle-lamp.hex
 
