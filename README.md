@@ -6,7 +6,7 @@ The **Cygwin** environment is used as it provides GNU-Toolchain (e.g. avr-gcc an
 
 Example compilation process of `hello-world.c` (involves flashing the AVR-microprocessor on Arduino Uno R3:
 ```
->> avr-gcc -mmcu=atmega1284p  -g hello-world.c -o hello-world.elf -O1
+>> avr-gcc -mmcu=atmega328p  -g hello-world.c -o hello-world.elf -O1
 >> avr-objcopy -j .text -j .data -j .bss -O ihex hello-world.elf hello-world.hex
 >> avrdude -p m328p -c arduino -P COM3 -e -U flash:w:hello-world.hex
 ```
