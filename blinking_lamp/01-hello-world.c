@@ -3,6 +3,8 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
+/* Blinks LED Diode on pin 8 (or bit 0 on Port B) */
+
 int main(void)
 {
     DDRB |= (1 << PB0);
