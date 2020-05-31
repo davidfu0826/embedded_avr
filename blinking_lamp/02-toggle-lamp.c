@@ -6,11 +6,11 @@
 /*
 * Program Description:
 *   This program will toggle a LED diode (PIN3) for each 
-*   button (PIN4) press on the AVR-microprocessor atmega1284p.
+*   button (PIN4) press on the AVR-microprocessor atmega328p.
 *
 * Compilation process on Windows with Cygwin and AVRDUDE:
 *   The following commands are used to flash the AVR-microprocessor (Arduino Uno R3)
-*   >> avr-gcc -mmcu=atmega328p  -g toggle-lamp.c  -o toggle-lamp.elf -O1
+*   >> avr-gcc -mmcu=atmega328p  -g 02-toggle-lamp.c  -o 02-toggle-lamp.elf -O1
 *   >> avr-objcopy -j .text -j .data -j .bss -O ihex 02-toggle-lamp.elf 02-toggle-lamp.hex
 *   >> avrdude -p m328p -c arduino -P COM3 -e -U flash:w:02-toggle-lamp.hex 
 *
