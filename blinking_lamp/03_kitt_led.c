@@ -15,10 +15,10 @@
 *   >> avrdude -p m328p -c arduino -P COM3 -e -U flash:w:03_kitt_led.hex 
 */
 
-#define MAX_STATE 3
+#define MAX_STATE 3 // Number of LEDs minus 1
 
-uint8_t state = 0;
-uint8_t decreasing = 0;
+uint8_t state = 0;      // This is the current LED state
+uint8_t decreasing = 0; // Flag for setting the direction of the animation
 
 static void turn_off_all(void);
 static void turn_on(uint8_t led_id);
@@ -32,7 +32,6 @@ int main (void)
 
     while (1)
     {
-
         /* Turn off previous LED (all) */
         turn_off_all();
 
