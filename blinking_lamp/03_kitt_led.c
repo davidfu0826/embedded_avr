@@ -4,6 +4,17 @@
 #include <util/delay.h>
 #include <stdint.h>
 
+/*
+* Program Description:
+*   This program will replicate the LEDs on KITT.
+*
+* Compilation process on Windows with Cygwin and AVRDUDE:
+*   The following commands are used to flash the AVR-microprocessor (Arduino Uno R3)
+*   >> avr-gcc -mmcu=atmega328p  -g 03_kitt_led.c  -o 03_kitt_led.elf -O1
+*   >> avr-objcopy -j .text -j .data -j .bss -O ihex 03_kitt_led.elf 03_kitt_led.hex
+*   >> avrdude -p m328p -c arduino -P COM3 -e -U flash:w:03_kitt_led.hex 
+*/
+
 #define MAX_STATE 3
 
 uint8_t state = 0;
